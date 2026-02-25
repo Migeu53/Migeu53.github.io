@@ -1,0 +1,43 @@
+body {
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 100px); /* 4 colunas para fechar os 8 pares */
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.card {
+    width: 100px;
+    height: 100px;
+    background-color: #4A90E2; /* O azul que aparece no seu print */
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ESCONDE A IMAGEM E O ERRO POR PADRÃO */
+.card img {
+    display: none; 
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* MOSTRA A FOTO QUANDO A CARTA É VIRADA */
+.card.virada {
+    background-color: #fff;
+}
+
+.card.virada img {
+    display: block;
+}
