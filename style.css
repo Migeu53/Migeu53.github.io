@@ -1,0 +1,60 @@
+body {
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.2em;
+    color: #555;
+    margin: 10px 0 30px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 110px);
+    gap: 15px;
+}
+
+.card {
+    width: 110px;
+    height: 110px;
+    background-color: #4A90E2;
+    border-radius: 12px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: transform 0.4s ease, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+}
+
+.card img {
+    display: none;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.card.virada {
+    background-color: #fff;
+    transform: rotateY(180deg);
+}
+
+.card.virada img {
+    display: block;
+}
